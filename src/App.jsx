@@ -1,33 +1,78 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import './App.css'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import HotDeal from './components/HotDeal'
+import NavBar from './components/NavBar'
+import NewProducts from './components/NewProducts'
+import NewsLetter from './components/NewsLetter'
+import TopSelling from './components/TopSelling'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Header/>
+    <NavBar/>
+    <div className="section">
+			
+			<div className="container">
+				{/* <!-- row --> */}
+				<div className="row">
+					{/* <!-- shop --> */}
+					<div className="col-md-4 col-xs-6">
+						<div className="shop">
+							<div className="shop-img">
+								<img src="./img/shop01.png" alt=""/>
+							</div>
+							<div className="shop-body">
+								<h3>Laptop<br/>Collection</h3>
+								<a href="#" className="cta-btn">Shop now <i className="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					{/* <!-- /shop --> */}
+
+					
+					<div className="col-md-4 col-xs-6">
+						<div className="shop">
+							<div className="shop-img">
+								<img src="./img/shop03.png" alt=""/>
+							</div>
+							<div className="shop-body">
+								<h3>Accessories<br/>Collection</h3>
+								<a href="#" className="cta-btn">Shop now <i className="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					
+
+					
+					<div className="col-md-4 col-xs-6">
+						<div className="shop">
+							<div className="shop-img">
+								<img src="./img/shop02.png" alt=""/>
+							</div>
+							<div className="shop-body">
+								<h3>Cameras<br/>Collection</h3>
+								<a href="#" className="cta-btn">Shop now <i className="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+    <NewProducts/>
+    <HotDeal/>
+    <TopSelling/>
+    <NewsLetter/>
+  
+    <Footer/>
     </>
   )
 }
